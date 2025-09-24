@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "name": "Carnation",
+    "meaning": "Symbolizes love, fascination, and distinction; often used for celebrations and Mother’s Day.",
+    "image": "/src/assets/images/flower_images/carnation.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 2,
+    "name": "Rose",
+    "meaning": "Represents love, passion, and beauty; classic symbol for romance and affection.",
+    "image": "/src/assets/images/flower_images/rose.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 3,
+    "name": "Peony",
+    "meaning": "Represents prosperity, good fortune, and romance; often used in weddings and celebrations.",
+    "image": "/src/assets/images/flower_images/peony.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 4,
+    "name": "Chrysanthemum",
+    "meaning": "Symbolizes loyalty, honesty, and joy; widely used in autumn festivals.",
+    "image": "/src/assets/images/flower_images/chrysanthemum.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 5,
+    "name": "Dahlia",
+    "meaning": "Symbolizes elegance, dignity, and creativity; often used in decorative floral arrangements.",
+    "image": "/src/assets/images/flower_images/dahlia.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 6,
+    "name": "Lavender",
+    "meaning": "Symbolizes calm, peace, and purity; often associated with relaxation and healing.",
+    "image": "/src/assets/images/flower_images/lavender.webp",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": false
+  },
+  {
+    "id": 7,
+    "name": "Waratah",
+    "meaning": "Native to Australia, symbolizes strength, courage, and beauty; often used as a national symbol.",
+    "image": "/src/assets/images/flower_images/waratah.png",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": true
+  },
+  {
+    "id": 8,
+    "name": "Protea",
+    "meaning": "Represents change, transformation, and diversity; often seen in South African culture.",
+    "image": "/src/assets/images/flower_images/protea.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": true
+  },
+  {
+    "id": 9,
+    "name": "Grevillea",
+    "meaning": "Native Australian flower, symbolizes adaptability and resilience; attracts birds with its nectar.",
+    "image": "/src/assets/images/flower_images/grevillea.jpg",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": true
+  },
+  {
+    "id": 10,
+    "name": "Flowering Gum",
+    "meaning": "Native Australian, symbolizes beauty and resilience; often linked to strength and vitality.",
+    "image": "/src/assets/images/flower_images/flowering-gum.jpg",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": true
+  },
+  {
+    "id": 11,
+    "name": "Gum Nut",
+    "meaning": "Symbolizes Australian wildlife, particularly the native eucalyptus trees, representing strength and endurance.",
+    "image": "/src/assets/images/flower_images/gum-nut.webp",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": true
+  },
+  {
+    "id": 12,
+    "name": "Eucalyptus",
+    "meaning": "Symbolizes protection and healing; known for its medicinal uses and aroma.",
+    "image": "/src/assets/images/flower_images/eucalyptus.webp",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": true
+  },
+  {
+    "id": 13,
+    "name": "Orchid",
+    "meaning": "Represents luxury, beauty, and strength; often seen as a symbol of rare beauty.",
+    "image": "/src/assets/images/flower_images/orchid.webp",
+    "isSeasonal": false,
+    "isAllYear": true,
+    "isNative": false
+  },
+  {
+    "id": 14,
+    "name": "Sunflower",
+    "meaning": "Symbolizes adoration, loyalty, and happiness; known for following the sun’s path.",
+    "image": "/src/assets/images/flower_images/sunflower.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 15,
+    "name": "Hydrangeas",
+    "meaning": "Symbolize gratitude, grace, and beauty; often given as a token of appreciation.",
+    "image": "/src/assets/images/flower_images/hydrangeas.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 16,
+    "name": "Gerbera",
+    "meaning": "Symbolizes innocence, purity, and cheerfulness; often used to brighten up spaces.",
+    "image": "/src/assets/images/flower_images/gerbera.jpeg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 17,
+    "name": "Daffodil",
+    "meaning": "Symbolizes renewal, hope, and rebirth; typically associated with the arrival of spring.",
+    "image": "/src/assets/images/flower_images/daffodil.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 18,
+    "name": "Marigold",
+    "meaning": "Represents creativity, passion, and warmth; commonly associated with celebrations and festivals.",
+    "image": "/src/assets/images/flower_images/marigold.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 19,
+    "name": "Tulip",
+    "meaning": "Symbolizes perfect love, elegance, and grace; a popular flower in springtime gardens.",
+    "image": "/src/assets/images/flower_images/tulip.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 20,
+    "name": "Calla Lily",
+    "meaning": "Represents purity, beauty, and elegance; often used in weddings and ceremonial occasions.",
+    "image": "/src/assets/images/flower_images/callla-lily.webp",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 21,
+    "name": "Zinnia",
+    "meaning": "Symbolizes endurance, remembrance, and lasting affection; bright, vibrant flower often seen in gardens.",
+    "image": "/src/assets/images/flower_images/zinnia.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  },
+  {
+    "id": 22,
+    "name": "Azalea",
+    "meaning": "Represents femininity, beauty, and abundance; often associated with spring and new beginnings.",
+    "image": "/src/assets/images/flower_images/azalea.jpg",
+    "isSeasonal": true,
+    "isAllYear": false,
+    "isNative": false
+  }
+]

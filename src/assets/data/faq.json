@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "How far in advance should I place an order?",
+    "answer": "For custom designs, we recommend 5–7 days’ notice. For weddings and large events, please enquire 4–6 weeks ahead so we can secure seasonal blooms."
+  },
+  {
+    "id": 2,
+    "question": "Do you deliver? What areas and when?",
+    "answer": "Yes. We deliver Monday–Saturday within the local metro area. Same-day delivery is available for orders placed before 12pm, subject to flower availability."
+  },
+  {
+    "id": 3,
+    "question": "Can I request specific flowers or colours?",
+    "answer": "Absolutely. Share your preferences in the request form. If a flower is out of season, we’ll suggest the closest seasonal alternative in the same palette."
+  },
+  {
+    "id": 4,
+    "question": "Are your flowers local and seasonal?",
+    "answer": "Yes. We prioritise locally grown, native, and in-season blooms to ensure freshness, reduce transport impact, and support local growers."
+  },
+  {
+    "id": 5,
+    "question": "How do I keep my flowers fresh for longer?",
+    "answer": "Trim stems, change water every 2 days, keep out of direct sun/heat, and remove any wilted stems. See our Flower Care Tips page for more details."
+  },
+  {
+    "id": 6,
+    "question": "What if a flower shown online is unavailable?",
+    "answer": "We may substitute with a comparable seasonal bloom of equal or higher value while maintaining the design style and colour story you selected."
+  }
+]
