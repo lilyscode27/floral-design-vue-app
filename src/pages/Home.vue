@@ -19,7 +19,7 @@
                 Perfectly in season, perfectly for you.
               </p>
               <p>
-                <router-link class="btn btn-lg btn-primary" to="/seasonal-flowers">Browse Seasonal Flowers</router-link>
+                <router-link class="btn btn-lg btn-primary" to="/seasonal-flowers">Explore Seasonal Blooms</router-link>
               </p>
             </div>
           </div>
@@ -34,7 +34,7 @@
                 find the perfect arrangement for your special moment.
               </p>
               <p>
-                <router-link class="btn btn-lg btn-primary" to="/flowers-by-occasion">Browse by Occasion</router-link>
+                <router-link class="btn btn-lg btn-primary" to="/flowers-by-occasion">Find Flowers for Every Occasion</router-link>
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@
                 floral arrangement that celebrates nature's beauty.
               </p>
               <p>
-                <router-link class="btn btn-lg btn-primary" to="/native-flowers">Browse Native Flowers</router-link>
+                <router-link class="btn btn-lg btn-primary" to="/native-flowers">Uncover Native Flower Treasures</router-link>
               </p>
 
             </div>
@@ -88,7 +88,7 @@
                 and chosen for its beauty, freshness, and meaning, so you can
                 find the perfect fit for any occasion.
               </p>
-              <router-link class="btn btn-lg btn-primary mb-3" to="/all-flowers">Browse All Flowers</router-link>
+              <router-link class="btn btn-lg btn-primary mb-3" to="/all-flowers">Browse Our Full Flower Collection</router-link>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@
                 thoughtfully crafted to reflect your personality, event theme,
                 and the natural beauty of every bloom.
               </p>
-              <router-link class="btn btn-lg btn-primary mb-3" to="/floral-designs">Browse Floral Designs</router-link>
+              <router-link class="btn btn-lg btn-primary mb-3" to="/floral-designs">Discover Our Floral Designs</router-link>
             </div>
           </div>
           <!--Section image-->
@@ -134,7 +134,7 @@
               Bring your floral vision to life with a custom design tailored
               to your occasion.
             </h2>
-            <router-link class="btn btn-lg btn-primary me-2" to="/request">Make a Request</router-link>
+            <router-link class="btn btn-lg btn-primary me-2" to="/request">Request Your Custom Design</router-link>
           </div>
         </div>
       </div>
@@ -322,7 +322,7 @@
                         </p>
                       </div>
                     </div>
-                    <router-link class="btn btn-primary btn-lg mt-3" to="/gallery">View Gallery</router-link>
+                    <router-link class="btn btn-primary btn-lg mt-3" to="/gallery">See Our Floral Gallery</router-link>
                   </div>
                 </div>
               </div>
