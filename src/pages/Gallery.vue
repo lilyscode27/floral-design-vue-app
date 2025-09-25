@@ -34,210 +34,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <!-- Slides of images -->
+                        <div class="carousel-item" v-for="(images, index) in imagesperSlide" :key="index">
                             <div class="row gy-4">
-                                <div class="col-md-6">
+                                <div class="col-md-6" v-for="(image, subIndex) in images" :key="subIndex">
                                     <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo3.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo4.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo5.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo6.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo7.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo8.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo9.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo10.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo11.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo12.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo13.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo14.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo15.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo16.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo17.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo18.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo19.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo20.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo21.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo22.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo23.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo24.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo25.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo26.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row gy-4">
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo27.jpg">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="ratio ratio-1x1">
-                                        <img alt="Flower Picture" class="img-fluid rounded-1 gallery-photo"
-                                            src="../assets/images/flower_images/gallery-photo28.jpg">
+                                        <img :src="image" class="img-fluid rounded-1 gallery-photo"
+                                            alt="Flower Picture" />
                                     </div>
                                 </div>
                             </div>
@@ -317,4 +120,46 @@
         </section>
     </main>
 </template>
-<script setup></script>
+<script setup>
+import { ref, computed } from 'vue';
+
+// List of all image sources
+const imgSrcs = ref([
+    "src/assets/images/flower_images/gallery-photo3.jpg",
+    "src/assets/images/flower_images/gallery-photo4.jpg",
+    "src/assets/images/flower_images/gallery-photo5.jpg",
+    "src/assets/images/flower_images/gallery-photo6.jpg",
+    "src/assets/images/flower_images/gallery-photo7.jpg",
+    "src/assets/images/flower_images/gallery-photo8.jpg",
+    "src/assets/images/flower_images/gallery-photo9.jpg",
+    "src/assets/images/flower_images/gallery-photo10.jpg",
+    "src/assets/images/flower_images/gallery-photo11.jpg",
+    "src/assets/images/flower_images/gallery-photo12.jpg",
+    "src/assets/images/flower_images/gallery-photo13.jpg",
+    "src/assets/images/flower_images/gallery-photo14.jpg",
+    "src/assets/images/flower_images/gallery-photo15.jpg",
+    "src/assets/images/flower_images/gallery-photo16.jpg",
+    "src/assets/images/flower_images/gallery-photo17.jpg",
+    "src/assets/images/flower_images/gallery-photo18.jpg",
+    "src/assets/images/flower_images/gallery-photo19.jpg",
+    "src/assets/images/flower_images/gallery-photo20.jpg",
+    "src/assets/images/flower_images/gallery-photo21.jpg",
+    "src/assets/images/flower_images/gallery-photo22.jpg",
+    "src/assets/images/flower_images/gallery-photo23.jpg",
+    "src/assets/images/flower_images/gallery-photo24.jpg",
+    "src/assets/images/flower_images/gallery-photo25.jpg",
+    "src/assets/images/flower_images/gallery-photo26.jpg",
+    "src/assets/images/flower_images/gallery-photo27.jpg",
+    "src/assets/images/flower_images/gallery-photo28.jpg"
+]);
+
+// List of images per slide (2)
+const imagesperSlide = computed(() => {
+    let images = [];
+
+    for (let i = 0; i < imgSrcs.value.length; i += 2) {
+        images.push([imgSrcs.value[i], imgSrcs.value[i + 1]]);
+    }
+    return images;
+});
+</script>

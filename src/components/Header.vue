@@ -2,11 +2,14 @@
     <header>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
+                <!--Brand name-->
                 <router-link class="navbar-brand" to="/">Flora Inspiration</router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="bi bi-list fs-3"></i>
                 </button>
+
+                <!--Navigation links-->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
@@ -36,7 +39,7 @@
                                         Occasion</router-link>
                                 </li>
                                 <li>
-                                    <router-link class="dropdown-item" to="/favorites">Favourites</router-link>
+                                    <router-link class="dropdown-item" to="/favorites">Favourites ({{ favoritesStore.count }})</router-link>
                                 </li>
                             </ul>
                         </li>
@@ -69,17 +72,19 @@
                             <router-link class="nav-link" to="/contact">Contact Us</router-link>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control focus-ring me-2" type="search" placeholder="Search"
-                            aria-label="Search" />
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
 </template>
-<script setup></script>
+
+<script setup>
+import { useFavoritesStore } from '../stores/favorites';
+
+// Get the favorites store
+const favoritesStore = useFavoritesStore();
+
+</script>
 <style scoped>
 
 </style>

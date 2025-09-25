@@ -1,6 +1,5 @@
 <template>
     <main>
-        <!--Flower Care Tips-->
         <section id="flower-care-tips" class="py-5 mt-5">
             <div class="container">
                 <!-- Section Heading -->

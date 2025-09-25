@@ -10,7 +10,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../assets/images/flower_images/carousel-image.jpg" class="d-block w-100" alt="First slide" />
+          <img :src="imageSrc" class="d-block w-100" alt="First slide" />
           <div class="container">
             <div class="carousel-caption text-start">
               <h1 class="display-3">Discover Our Seasonal Blooms</h1>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../assets/images/flower_images/carousel-image.jpg" class="d-block w-100" alt="First slide" />
+          <img :src="imageSrc" class="d-block w-100" alt="First slide" />
           <div class="container">
             <div class="carousel-caption">
               <h1 class="display-3">Flowers for Every Occasion</h1>
@@ -40,18 +40,18 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../assets/images/flower_images/carousel-image.jpg" class="d-block w-100" alt="First slide" />
+          <img :src="imageSrc" class="d-block w-100" alt="First slide" />
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1 class="display-3">Explore Our Floral Designs</h1>
+              <h1 class="display-3">Explore Our Native Flowers</h1>
               <p class="text-body-secondary">
-                See our range of design styles - from classic elegance to
-                modern minimalism - and find inspiration for your next
-                arrangement.
+                Explore our collection of native flowers - from vibrant blooms to unique species - and find the perfect
+                floral arrangement that celebrates nature's beauty.
               </p>
               <p>
-                <router-link class="btn btn-lg btn-primary" to="/floral-designs">Browse Floral Designs</router-link>
+                <router-link class="btn btn-lg btn-primary" to="/native-flowers">Browse Native Flowers</router-link>
               </p>
+
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
       </button>
     </div>
 
-    <!--Flower Catalog-->
+    <!--Flower Catalogue-->
     <section id="flower-catalog" class="py-4">
       <div class="container">
         <div class="row gx-4 align-items-center">
@@ -333,5 +333,27 @@
     </section>
   </main>
 </template>
+
 <script setup>
+import { computed } from 'vue';
+import { useThemeStore } from '../stores/theme';
+
+const themeStore = useThemeStore() // Get the theme store
+
+// Update the carousel image source based on the current theme
+const imageSrc = computed(() => {
+  if (themeStore.isDarkMode)
+    return new URL('../assets/images/flower_images/carousel-image-dark.png', import.meta.url).href;
+  else
+    return new URL('../assets/images/flower_images/carousel-image.jpg', import.meta.url).href;
+});
+
 </script>
+
+<style scoped>
+#myCarousel img,
+#header-pic img {
+  height: 500px;
+  width: 100%;
+}
+</style>

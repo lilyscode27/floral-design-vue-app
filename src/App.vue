@@ -2,7 +2,6 @@
 import { useThemeStore } from './stores/theme';
 import SwitchThemeButton from './components/SwitchThemeButton.vue';
 import { watch } from 'vue';
-import { computed } from 'vue';
 import { useTextSizeStore } from './stores/textSize';
 import SwitchTextSizeButton from './components/SwitchTextSizeButton.vue';
 
@@ -22,11 +21,11 @@ watch(
     }
 )
 
-// Text sizes (small, medium, large)
+//// Text sizes (small, medium, large)
 
 const textSizeStore = useTextSizeStore()
 
-// Watch the textSize state ad update the respective text size
+// Watch the textSize state and update the respective text size
 watch(
   () => textSizeStore.textSize,
   (size) => {
@@ -47,4 +46,4 @@ watch(
     </div>
 </template>
 
-<stype scoped></stype>
+

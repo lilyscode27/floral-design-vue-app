@@ -1,5 +1,4 @@
 <template>
-    <!--Request Form-->
     <section id="request" class="py-5">
         <div class="container">
             <form id="requestForm" @submit.prevent="submitForm">
@@ -53,6 +52,7 @@
                     </div>
                 </div>
 
+                <!--Event type options-->
                 <div class="row g-3 mb-4 justify-content-center">
                     <div class="col-lg-8 col-md-12">
                         <label for="eventType" class="form-label">Event Type</label>
@@ -100,93 +100,33 @@
                 <!-- Style Selection -->
                 <div class="mb-4">
                     <div class="row mb-3 justify-content-center">
-                        <h5 class="col-lg-8 col-md-6 fw-bold mb-3">Style</h5>
+                        <h5 class="col-lg-8 fw-bold mb-3">Style</h5>
                     </div>
 
+                    <!--Style options-->
                     <div class="row g-3 mb-3 justify-content-center">
-                        <!-- Garden Elegance -->
-                        <div class="col-lg-4 col-md-6">
-                            <input class="btn-check" type="radio" name="style" id="style-garden" value="Garden Elegance"
-                                v-model="style" />
-                            <label class="card h-100 shadow-sm btn" for="style-garden">
-                                <div class="card-body text-center">
-                                    <h6 class="fw-bold mb-2 text-body-secondary">
-                                        Garden Elegance
-                                    </h6>
-                                    <p class="text-body-secondary small mb-0">
-                                        Lush, romantic, seasonal blooms with trailing greenery.
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
+                        <div class="col-lg-8">
 
-                        <!-- Modern Minimalist -->
-                        <div class="col-lg-4 col-md-6">
-                            <input class="btn-check" type="radio" name="style" id="style-modern"
-                                value="Modern Minimalist" v-model="style" />
-                            <label class="card h-100 shadow-sm btn" for="style-modern">
-                                <div class="card-body text-center">
-                                    <h6 class="fw-bold mb-2 text-body-secondary">
-                                        Modern Minimalist
-                                    </h6>
-                                    <p class="text-body-secondary small mb-0">
-                                        Clean lines, focal blooms, refined negative space.
-                                    </p>
+                            <div class="row justify-content-center">
+                                <div v-for="(style, index) in eventStyleOptions" :key="index"
+                                    class="col-lg-4 col-md-6 mb-3">
+                                    <input class="btn-check" type="radio" name="style" :id="style.name"
+                                        :value="style.name" v-model="selectedStyle" />
+                                    <label class="card h-100 shadow-sm btn" :for="style.name">
+                                        <div class="card-body text-center">
+                                            <h6 class="fw-bold mb-2 text-body-secondary">
+                                                {{ style.name }}
+                                            </h6>
+                                            <p class="text-body-secondary small mb-0">
+                                                {{ style.description }}
+                                            </p>
+                                        </div>
+                                    </label>
                                 </div>
-                            </label>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row g-3 mb-3 justify-content-center">
-                        <!-- Rustic Charm -->
-                        <div class="col-lg-4 col-md-6">
-                            <input class="btn-check" type="radio" name="style" id="style-rustic" value="Rustic Charm"
-                                v-model="style" />
-                            <label class="card h-100 shadow-sm btn" for="style-rustic">
-                                <div class="card-body text-center">
-                                    <h6 class="fw-bold mb-2 text-body-secondary">
-                                        Rustic Charm
-                                    </h6>
-                                    <p class="text-body-secondary small mb-0">
-                                        Earthy textures, wildflower feel, cosy and organic.
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
-
-                        <!-- Luxe Statement -->
-                        <div class="col-lg-4 col-md-6">
-                            <input class="btn-check" type="radio" name="style" id="style-luxe" value="Luxe Statement"
-                                v-model="style" />
-                            <label class="card h-100 shadow-sm btn" for="style-luxe">
-                                <div class="card-body text-center">
-                                    <h6 class="fw-bold mb-2 text-body-secondary">
-                                        Luxe Statement
-                                    </h6>
-                                    <p class="text-body-secondary small mb-0">
-                                        Grand, layered textures, premium blooms and rich hues.
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="row g-3 mb-3 justify-content-center">
-                        <!-- Other -->
-                        <div class="col-lg-4 col-md-6">
-                            <input class="btn-check" type="radio" name="style" id="style-other" value="other"
-                                v-model="style" />
-                            <label class="card h-100 shadow-sm btn" for="style-other">
-                                <div class="card-body text-center">
-                                    <h6 class="fw-bold mb-2 text-body-secondary">Other</h6>
-                                    <p class="text-body-secondary small mb-0">
-                                        Describe your preferred style below
-                                    </p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-lg-4 col-md-6"></div>
-                    </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-md-12">
                             <div id="styleMsg" class="form-text text-danger" v-if="submitted && !isStyleValid">You must
@@ -206,7 +146,7 @@
                     </div>
                 </div>
 
-                <!-- Specific Flowers (optional) -->
+                <!-- Specific Flowers -->
                 <div class="row mb-4 justify-content-center">
                     <div class="col-lg-8 col-md-12">
                         <label for="flowerReq" class="form-label">Specific Flower Requirements (optional)</label>
@@ -231,7 +171,7 @@
                     </div>
                 </div>
 
-                <!-- Note (optional) -->
+                <!-- Note -->
                 <div class="row mb-4 justify-content-center">
                     <div class="col-lg-8 col-md-12">
                         <label for="note" class="form-label">Note (optional)</label>
@@ -265,6 +205,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
+                    <!--Emitted data-->
                     <div id="emittedData" class="col-lg-8 col-md-12" v-if="displayEmittedData">
                         <h5 class="text-center">Form submitted successfully!</h5>
                         <pre class="mt-3 p-3">Emitted Data:
@@ -277,7 +218,7 @@
   eventSize: {{ eventSize }},
   eventDate: {{ eventDate }},
   eventDetails: {{ eventDetails }},
-  style: {{ style }},
+  style: {{ selectedStyle }},
   styleDetails: {{ styleDetails }},
   flowerRequirements: {{ flowerRequirements }},
   budget: {{ budget }},
@@ -298,7 +239,6 @@ const props = defineProps({
     defaultName: String,
 });
 
-// Define emits (to emit events like `submit-form`)
 const emit = defineEmits();
 
 // Options for event types
@@ -309,6 +249,15 @@ const eventTypeOptions = [
     "Corporate Function",
     "Other (Enter event details below)",
 ];
+
+// Options for event styles
+const eventStyleOptions = [
+    { name: "Garden Elegance", description: "Lush, romantic, seasonal blooms with trailing greenery." },
+    { name: "Modern Minimalist", description: "Clean lines, focal blooms, refined negative space." },
+    { name: "Rustic Charm", description: "Earthy textures, wildflower feel, cosy and organic." },
+    { name: "Luxe Statement", description: "Grand, layered textures, premium blooms and rich hues." },
+    { name: "Other", description: "Describe your preferred style below" }
+]
 
 // Options for budget range
 const budgetOptions = [
@@ -327,7 +276,7 @@ const eventType = ref("");
 const eventSize = ref(0);
 const eventDate = ref("");
 const eventDetails = ref("");
-const style = ref("");
+const selectedStyle = ref("");
 const styleDetails = ref("");
 const flowerRequirements = ref("");
 const budget = ref("");
@@ -393,14 +342,14 @@ const isEventDateValid = computed(() => {
 
 // Event style: Must be selected
 const isStyleValid = computed(() => {
-    return style.value;
+    return selectedStyle.value;
 });
 
 // Style details: Must not be empty if "other" is chosen for event style
 const isStyleDetailsValid = computed(() => {
     return (
-        (isStyleValid.value && style.value != "other") ||
-        (style.value === "other" && styleDetails.value.trim())
+        (isStyleValid.value && selectedStyle.value.toLowerCase() != "other") ||
+        (selectedStyle.value.toLowerCase() === "other" && styleDetails.value.trim())
     );
 });
 
@@ -443,7 +392,7 @@ const submitForm = () => {
         eventSize: eventSize.value,
         eventDate: eventDate.value,
         eventDetails: eventDetails.value,
-        style: style.value,
+        style: selectedStyle.value,
         styleDetails: styleDetails.value,
         flowerRequirements: flowerRequirements.value,
         budget: budget.value,
@@ -463,7 +412,7 @@ const submitForm = () => {
         eventSize.value = 0;
         eventDate.value = "";
         eventDetails.value = "";
-        style.value = "";
+        selectedStyle.value = "";
         styleDetails.value = "";
         flowerRequirements.value = "";
         budget.value = "";

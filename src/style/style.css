@@ -1,6 +1,5 @@
-/* Override Bootstrap's default colors */
+/* Main brand colors */
 :root {
-  /* HEX main brand colors */
   --bs-primary: #4b6043;
   --bs-secondary: #f4c2c2;
   --bs-light: #faf9f6;
@@ -8,22 +7,19 @@
   --bs-warning: #ffd97d;
   --bs-info: #cbaacb;
 
-  /* RGB main brand colors */
   --bs-primary-rgb: 75, 96, 67;
   --bs-secondary-rgb: 244, 194, 194;
   --bs-dark-rgb: 51, 51, 51;
   --bs-warning-rgb: 255, 217, 125;
   --bs-info-rgb: 203, 170, 203;
 
-  /* Subtle background colors */
   --bs-primary-bg-subtle: #e5e9e3;
   --bs-secondary-bg-subtle: #fbecec;
-  --bs-light-bg-subtle: #ffffff;
+  --bs-light-bg-subtle: #e0fcdf;
   --bs-dark-bg-subtle: #e5e5e5;
   --bs-warning-bg-subtle: #fff7e0;
   --bs-info-bg-subtle: #f5eef5;
 
-  /* Text emphasis colors */
   --bs-primary-text-emphasis: #36422f;
   --bs-secondary-text-emphasis: #a27d7d;
   --bs-light-text-emphasis: #6c757d;
@@ -31,7 +27,6 @@
   --bs-warning-text-emphasis: #b38600;
   --bs-info-text-emphasis: #7d5e7d;
 
-  /* Button active/focus colors */
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
   --bs-btn-hover-bg: #3e5237;
@@ -40,15 +35,11 @@
   --bs-btn-active-border-color: #32432d;
   --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
 
-  /* Base link color */
   --bs-link-color: var(--bs-primary);
   --bs-link-color-rgb: 75, 96, 67;
-
-  /* Hover link color */
   --bs-link-hover-color: #36422f;
   --bs-link-hover-color-rgb: 54, 66, 47;
 
-  /* Focus ring color */
   --bs-focus-ring-color: rgba(var(--bs-primary-rgb), 0.25);
 }
 
@@ -82,12 +73,14 @@ nav,
 .nav-link.dropdown-toggle.show {
   color: var(--bs-primary);
 }
+.navbar {
+  --bs-navbar-color: var(--bs-primary);
+  --bs-navbar-color-rgb: var(--bs-primary-rgb);
+}
 
 .navbar-nav {
-  --bs-nav-link-hover-color: var(--bs-link-hover-color); /* Link hover color */
-  --bs-nav-link-hover-color-rgb: var(
-    --bs-link-hover-color-rgb
-  ); /* RGB for hover color */
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-hover-color-rgb: var(--bs-link-hover-color-rgb);
 }
 
 /* Dropdown menu styles */
@@ -121,26 +114,19 @@ nav,
 }
 
 .btn-outline-primary {
-  --bs-btn-color: var(--bs-primary); /* Set text color to primary */
-  --bs-btn-bg: transparent; /* Transparent background */
-  --bs-btn-border-color: var(--bs-primary); /* Border color matches primary */
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--bs-primary);
 
-  /* Hover styles */
-  --bs-btn-hover-color: #fff; /* Text color changes to white on hover */
-  --bs-btn-hover-bg: var(--bs-primary); /* Background color matches primary */
-  --bs-btn-hover-border-color: var(--bs-primary); /* Border color on hover */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
 
-  /* Focus styles */
-  --bs-btn-focus-shadow-rgb: var(
-    --bs-primary-rgb
-  ); /* Primary shadow color for focus */
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
 
-  /* Active state */
-  --bs-btn-active-color: #fff; /* Active text color */
-  --bs-btn-active-bg: var(
-    --bs-primary
-  ); /* Active background color matches primary */
-  --bs-btn-active-border-color: var(--bs-primary); /* Active border color */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
 }
 
 /* Accordion buttons */
@@ -151,13 +137,6 @@ nav,
 /* Image styles */
 img {
   object-fit: cover;
-}
-
-/* Carousel images */
-#myCarousel img,
-#header-pic img {
-  height: 500px;
-  width: 100%;
 }
 
 .carousel-control-prev-icon,
@@ -173,9 +152,10 @@ footer {
 }
 
 /* Badge styles */
+
 /* Native badge */
 .badge-native {
-  background-color: var(--bs-primary-bg-subtle);
+  background-color: var(--bs-light-bg-subtle);
   color: var(--bs-primary-text-emphasis);
   border-color: var(--bs-primary-border-subtle);
 }
@@ -199,7 +179,7 @@ footer {
 form .btn-check:checked + .btn.card {
   background-color: var(--bs-primary) !important;
   border-color: var(--bs-primary) !important;
-  color: #fff !important; /* parent text */
+  color: #fff !important;
 }
 
 form .btn-check:checked + .btn.card .text-body-secondary,
@@ -214,18 +194,22 @@ form .btn.card:hover {
   border-color: rgba(var(--bs-primary-rgb), 0.25);
 }
 
-.dark-mode {
-  /* HEX main brand colors */
-  --bs-primary: #88b04b; /* lighter green accent for contrast */
-  --bs-body-color: #88b04b;
-  --bs-secondary: #a8c686; /* muted greenish secondary */
-  --bs-secondary-color: #a8c686;
-  --bs-light: #1b1f1b; /* overall page background (dark greenish black) */
-  --bs-dark: #e5e5e5; /* light text color */
-  --bs-warning: #ffd97d; /* keep warning bright for visibility */
-  --bs-info: #9bbf9f; /* softer green-tinted info */
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
 
-  /* RGB main brand colors */
+/* Dark mode style */
+.dark-mode {
+  --bs-primary: #88b04b; 
+  --bs-body-color: #88b04b;
+  --bs-secondary: #a8c686; 
+  --bs-secondary-color: #a8c686;
+  --bs-light: #1b1f1b; 
+  --bs-dark: #e5e5e5;
+  --bs-warning: #ffd97d; 
+  --bs-info: #9bbf9f; 
+
   --bs-primary-rgb: 136, 176, 75;
   --bs-secondary-rgb: 168, 198, 134;
   --bs-dark-rgb: 229, 229, 229;
@@ -233,24 +217,21 @@ form .btn.card:hover {
   --bs-info-rgb: 155, 191, 159;
   --bs-light-rgb: 42, 56, 40;
 
-  /* Subtle background colors */
-  --bs-primary-bg-subtle: #2a3828; /* dark olive background */
+  --bs-primary-bg-subtle: #2a3828; 
   --bs-body-bg: #2a3828;
-  --bs-secondary-bg-subtle: #263026; /* slightly different dark background */
-  --bs-light-bg-subtle: #1b1f1b; /* same as body bg */
-  --bs-dark-bg-subtle: #121512; /* deeper black-green for contrast */
-  --bs-warning-bg-subtle: #4b3f2a; /* muted gold background */
-  --bs-info-bg-subtle: #2c3a2f; /* muted greenish-gray background */
+  --bs-secondary-bg-subtle: #263026; 
+  --bs-light-bg-subtle: #1d321d; 
+  --bs-dark-bg-subtle: #121512; 
+  --bs-warning-bg-subtle: #4b3f2a;
+  --bs-info-bg-subtle: #2c3a2f; 
 
-  /* Text emphasis colors */
-  --bs-primary-text-emphasis: #a3d977; /* bright lime-green for headers */
-  --bs-secondary-text-emphasis: #c4e3a8; /* pale green */
-  --bs-light-text-emphasis: #cfd3cf; /* lighter gray */
-  --bs-dark-text-emphasis: #f8f8f8; /* near-white for max contrast */
-  --bs-warning-text-emphasis: #ffd97d; /* same gold for emphasis */
-  --bs-info-text-emphasis: #b3d9b8; /* light mint */
+  --bs-primary-text-emphasis: #a3d977;
+  --bs-secondary-text-emphasis: #c4e3a8; 
+  --bs-light-text-emphasis: #cfd3cf; 
+  --bs-dark-text-emphasis: #f8f8f8; 
+  --bs-warning-text-emphasis: #ffd97d; 
+  --bs-info-text-emphasis: #b3d9b8;
 
-  /* Button active/focus colors */
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
   --bs-btn-hover-bg: #76a13f;
@@ -260,11 +241,9 @@ form .btn.card:hover {
   --bs-btn-active-border-color: #5c8032;
   --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
 
-  /* Base link color */
   --bs-link-color: var(--bs-primary);
   --bs-link-color-rgb: 136, 176, 75;
 
-  /* Hover link color */
   --bs-link-hover-color: #a3d977;
   --bs-link-hover-color-rgb: 163, 217, 119;
   --bs-navbar-hover-color: #a3d977;
@@ -273,7 +252,6 @@ form .btn.card:hover {
   --bs-emphasis-color: #a3d977;
   --bs-emphasis-color-rgb: 163, 217, 119;
 
-  /* Focus ring color */
   --bs-focus-ring-color: rgba(var(--bs-primary-rgb), 0.35);
 }
 

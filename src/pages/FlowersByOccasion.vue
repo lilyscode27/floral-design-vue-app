@@ -13,9 +13,9 @@
             </div>
         </div>
 
-        <!--Occasion Sections-->
-        <section v-for="(flowers, occasion) in occasionFlowers" :key="occasion" class="mt-5 mb-3"
-            :id="occasion.toLowerCase().replace(/\s+/g, '-')">
+        <!--Flowers by Occasion-->
+        <section v-for="(flowers, occasion) in flowerObjectsByOccasion" :key="occasion" class="mt-5 mb-3"
+            :id="occasion">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <h3 class="display-6 m-0">{{ occasion }}</h3>
@@ -29,25 +29,29 @@
         </section>
     </main>
 </template>
+
 <script setup>
 import { computed } from 'vue'
 import FlowerCard from '../components/FlowerCard.vue'
 import flowersData from '../assets/data/flowers.json'
 
-// Mapping: occasion -> flower names
-const occasions = {
+// List of flower names for each occasions
+const flowerNamesByOccasion = {
     Wedding: ['Peony', 'Rose', 'Orchid', 'Calla Lily'],
     Birthday: ['Carnation', 'Gerbera', 'Sunflower', 'Zinnia'],
     Graduation: ['Dahlia', 'Sunflower', 'Gerbera', 'Tulip'],
     'Corporate Functions': ['Protea', 'Grevillea', 'Eucalyptus', 'Hydrangeas']
 }
 
-// For convenience: a computed object where each key = occasion, value = flower objects
-const occasionFlowers = computed(() => {
-    const result = {}
-    for (const [occasion, names] of Object.entries(occasions)) {
+// List of flower's full details (flower objects) for each occasion
+const flowerObjectsByOccasion = computed(() => {
+    const result = {} 
+
+    // Iterate over each occasion and its respective list of flower names
+    for (const [occasion, flowerLists] of Object.entries(flowerNamesByOccasion)) {
+        // Assign the respective flower object to its occasion
         result[occasion] = flowersData.filter(flower =>
-            names.includes(flower.name)
+            flowerLists.includes(flower.name)
         )
     }
     return result

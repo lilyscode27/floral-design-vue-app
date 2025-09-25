@@ -1,4 +1,5 @@
 <template>
+    <!--Button to switch theme-->
     <button class="btn btn-primary switch-theme-btn" @click="switchTheme">
         <i :class="themeStore.isDarkMode ? 'bi bi-sun fs-4' : 'bi bi-moon fs-4'"></i>
     </button>
@@ -9,9 +10,6 @@ import { useThemeStore } from '../stores/theme'
 
 // Get the theme store
 const themeStore = useThemeStore()
-
-// Access the store's state
-const isDarkMode = themeStore.$state.isDarkMode
 
 // Switch theme
 const switchTheme = () => {

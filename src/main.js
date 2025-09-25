@@ -4,6 +4,9 @@ import { createRouter, createWebHistory } from "vue-router";
 import { useFavoritesStore } from "./stores/favorites";
 import App from "./App.vue";
 
+// Global styles
+import './style/style.css';
+
 // Global components
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
@@ -86,7 +89,7 @@ const router = createRouter({
 
 // Set document title whenever route changes
 router.beforeEach((to) => {
-  document.title = to.meta.title || "Flora Inspiration"; // Use the title defined in the route meta or fallback to a default
+  document.title = to.meta.title;
 });
 
 const app = createApp(App);
@@ -100,7 +103,7 @@ app.component("SwitchTextSizeButton", SwitchTextSizeButton);
 app.use(createPinia());
 
 const favoritesStore = useFavoritesStore();
-favoritesStore.loadFromLocalStorage();
+favoritesStore.loadFromLocalStorage(); // Load favorite flowers list from local storage
 
 app.use(router);
 app.mount("#app");

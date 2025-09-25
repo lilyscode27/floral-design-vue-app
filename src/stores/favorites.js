@@ -1,38 +1,45 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useFavoritesStore = defineStore('favorites', {
+export const useFavoritesStore = defineStore("favorites", {
   state: () => ({
-    favorites: [] // store flower IDs or names
+    favorites: [], // List of favorite flowers' names
   }),
 
   getters: {
-    isFavorite: (state) => {
-      return (flowerName) => state.favorites.includes(flowerName)
+    // Check if a flower is favorited
+    isFavorite() {
+      return (flowerName) => this.favorites.includes(flowerName);
     },
-    favoriteFlowers: (state) => {
-      return state.favorites
+
+    count() {
+      return this.favorites.length;
     }
   },
 
   actions: {
     toggleFavorite(flowerName) {
+      // If the flower is already favorited, remove it from the list
       if (this.favorites.includes(flowerName)) {
-        this.favorites = this.favorites.filter(f => f !== flowerName)
+        this.favorites = this.favorites.filter((f) => f != flowerName);
       } else {
-        this.favorites.push(flowerName)
+        this.favorites.push(flowerName);
       }
-      this.saveToLocalStorage()
+
+      this.saveToLocalStorage(); // Save to local storage
     },
 
+    // Load the favorite flowers list from local storage
     loadFromLocalStorage() {
-      const stored = localStorage.getItem('favorites')
+      const stored = localStorage.getItem("favorites");
+
       if (stored) {
-        this.favorites = JSON.parse(stored)
+        this.favorites = JSON.parse(stored);
       }
     },
 
+    // Save the favorite flowers list to local storage
     saveToLocalStorage() {
-      localStorage.setItem('favorites', JSON.stringify(this.favorites))
-    }
-  }
-})
+      localStorage.setItem("favorites", JSON.stringify(this.favorites));
+    },
+  },
+});

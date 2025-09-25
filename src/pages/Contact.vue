@@ -1,6 +1,5 @@
 <template>
     <main>
-        <!--Contact Us-->
         <section id="contact-us" class="py-5 mt-5">
             <div class="container">
                 <!--Section heading-->

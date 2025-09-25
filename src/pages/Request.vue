@@ -13,8 +13,10 @@
 
     <!-- Request Form -->
     <main>
-        
+        <!--Request Form-->
         <RequestForm @submit-form="handleForm" :defaultName="'Default Name'"></RequestForm>
+
+        <!--Form Summary-->
         <div id="formSummary" class="container mb-3" v-if="displaySummary">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12 border border-2 border-primary border-opacity-50 rounded-4">
@@ -38,6 +40,7 @@
         </div>
     </main>
 </template>
+
 <script setup>
 import RequestForm from '../components/RequestForm.vue';
 import { ref, reactive } from 'vue';
@@ -60,7 +63,7 @@ const formSummary = reactive({
     receiveUpdates: null,
 });
 
-const displaySummary = ref(false);
+const displaySummary = ref(false); // Control the display of formSummary
 
 // Function to update the formSummary with the provided formData
 const handleForm = (formData) => {

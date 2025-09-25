@@ -8,7 +8,6 @@ export const useTextSizeStore = defineStore("textSize", {
     // Switch between small, medium, and large text sizes
     switchTextSize(size) {
         this.textSize = size
-        console.log(this.textSize)
     }
   }
 });

@@ -1,6 +1,5 @@
 <template>
     <main>
-        <!--How It Works-->
         <section id="how-it-works" class="py-5 mt-5">
             <div class="container">
                 <!-- Section heading -->
@@ -69,7 +68,7 @@
             </div>
         </section>
 
-        <!--FAQ-->
+        <!--FAQ Section-->
         <section id="faq" class="py-5">
             <div class="container">
                 <!-- Section heading -->
@@ -84,11 +83,10 @@
                     </div>
                 </div>
 
-                <!-- Section content -->
+                <!-- FAQ -->
                 <div class="row justify-content-center">
                     <div class="col-md-10">
                         <div class="accordion accordion-flush bg-light rounded-3 p-2 p-md-3" id="faqAccordion">
-
                             <FAQComponent v-for="item in faqData" :key="item.id" :id="item.id" :question="item.question"
                                 :answer="item.answer" />
 
@@ -100,6 +98,7 @@
 
     </main>
 </template>
+
 <script setup>
 import FAQComponent from "../components/FAQComponent.vue";
 import faqData from "../assets/data/faq.json"
